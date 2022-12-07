@@ -7,10 +7,11 @@
 		"preview": "nuxt preview .playground",
 		"postinstall": "nuxt prepare .playground"
 	},
-	"devDependencies": {
+	"dependencies": {
 		"@unocss/nuxt": "^0.47.5",
-		"@unocss/transformer-variant-group": "^0.47.5",
-		"nuxt": "3.0.0",
 		"nuxt-icon": "^0.1.8"
+	},
+	"devDependencies": {
+		"nuxt": "3.0.0"
 	}
 }
