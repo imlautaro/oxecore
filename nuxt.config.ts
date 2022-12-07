@@ -1,5 +1,3 @@
-import transformerVariantGroup from '@unocss/transformer-variant-group'
-
 const range = (size: number, startAt = 1) =>
 	Array.from(Array(size).keys()).map(i => i + startAt)
 
@@ -28,7 +26,6 @@ export default defineNuxtConfig({
 			'justify-around',
 			'justify-evenly',
 		],
-		transformers: [transformerVariantGroup()],
 		typography: true,
 	},
 })
