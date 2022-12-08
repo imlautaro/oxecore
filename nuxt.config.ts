@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 			size: '1.5em',
 		},
 	},
-	modules: ['@unocss/nuxt', 'nuxt-icon'],
+	modules: ['@unocss/nuxt', 'nuxt-icon', '@vueuse/nuxt'],
 	srcDir: 'src',
 	unocss: {
 		preflight: true,

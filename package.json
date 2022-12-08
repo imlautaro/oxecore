@@ -9,6 +9,8 @@
 	},
 	"dependencies": {
 		"@unocss/nuxt": "^0.47.5",
+		"@vueuse/core": "^9.6.0",
+		"@vueuse/nuxt": "^9.6.0",
 		"nuxt-icon": "^0.1.8"
 	},
 	"devDependencies": {
