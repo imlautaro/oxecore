@@ -1,42 +1,106 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt layer with essential modules and components to simplify a little bit the creation of new projects.
 
 ## Setup
 
-Make sure to install the dependencies:
-
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+npm i -D oxecore # yarn add -D oxecore
 ```
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
+```tsx
+// ~~/nuxt.config.ts
+export default defineNuxtConfig({
+	extends: ['oxecore'],
+})
 ```
 
-## Production
+## Modules Preset
 
-Build the application for production:
+-   UnoCSS\*
+-   Nuxt Icon\*
+-   VueUse
 
-```bash
-npm run build
+### UnoCSS defaults
+
+-   Preflight
+-   Directives & Variant Group Transformers enabled
+-   Typography enabled
+
+### Nuxt Icon defaults
+
+-   Size set to 1.5em
+
+## Components
+
+-   Stack
+-   Container
+
+## Usage
+
+### Stack Component
+
+This component is for creating flex elements by an intuitive way.
+
+**Example:**
+
+```tsx
+<template>
+	<Stack gap="2" items="center" vertical>
+		<span>Apple</span>
+		<span>Banana</span>
+		<span>Orange</span>
+	</Stack>
+	<!-- unocss equivalent -->
+	<div class="flex flex-col space-y-2 items-center">
+		<span>Apple</span>
+		<span>Banana</span>
+		<span>Orange</span>
+	</div>
+</template>
 ```
 
-Locally preview production build:
+**Props available are:**
 
-```bash
-npm run preview
+-   `vertical` → `boolean`
+-   `component` → `string`
+-   `items` → `'start' | 'end' | 'center' | 'baseline' | 'stretch’`
+-   `justify` → `'start' | 'end' | 'center' | 'between' | 'around' | 'evenly’`
+-   `gap` → `string ('0' to '12')`
+
+**Defaults are:**
+
+-   `vertical: false`
+-   `component: ‘div’`
+-   `gap: ‘0’`
+
+<aside>
+ℹ️ Notice that the gap prop doesn’t actually use the `gap` css feature, it uses margins between elements to have full compatibility across all browsers.
+
+</aside>
+
+### Container Component
+
+This component is for creating containers by an intuitive way.
+
+**Example:**
+
+```tsx
+<template>
+	<Container class="py-12" max="lg">
+		<h1>Hello world!</h1>
+	</Container>
+	<!-- unocss equivalent -->
+	<div class="mx-auto px-4 w-full lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm py-12">
+		<h1>Hello world!</h1>
+	</div>
+</template>
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**Props available are:**
+
+-   `max` → `'sm' | 'md' | 'lg' | 'xl' | '2xl’`
+-   `component` → `string`
+
+**Defaults are:**
+
+-   `max: '2xl'`
+-   `component: ‘div’`
