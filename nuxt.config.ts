@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 		safelist: [
 			...range(12).map(i => `space-x-${i}`),
 			...range(12).map(i => `space-y-${i}`),
+			...range(12).map(i => `px-${i}`),
 			'items-start',
 			'items-baseline',
 			'items-center',
@@ -29,6 +30,9 @@ export default defineNuxtConfig({
 			'justify-around',
 			'justify-evenly',
 		],
+		shortcuts: {
+			'container-px': 'px-6',
+		},
 		transformers: [transformerDirectives(), transformerVariantGroup()],
 		typography: true,
 	},
