@@ -1,14 +1,13 @@
 {
 	"name": "oxecore",
 	"type": "module",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "./nuxt.config.ts",
 	"scripts": {
-		"dev": "nuxt dev .playground",
-		"build": "nuxt build .playground",
-		"generate": "nuxt generate .playground",
-		"preview": "nuxt preview .playground",
-		"postinstall": "nuxt prepare .playground"
+		"dev": "nuxi prepare & nuxi dev .playground",
+		"build": "nuxi build .playground",
+		"generate": "nuxi generate .playground",
+		"preview": "nuxi preview .playground"
 	},
 	"dependencies": {
 		"@unocss/nuxt": "^0.50.0",
