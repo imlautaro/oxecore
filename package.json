@@ -4,18 +4,19 @@
 	"version": "0.0.1",
 	"main": "./nuxt.config.ts",
 	"scripts": {
-		"dev": "nuxi prepare & nuxi dev .playground",
-		"build": "nuxi build .playground",
-		"generate": "nuxi generate .playground",
-		"preview": "nuxi preview .playground"
+		"dev": "nuxt dev .playground",
+		"build": "nuxt build .playground",
+		"generate": "nuxt generate .playground",
+		"preview": "nuxt preview .playground",
+		"postinstall": "nuxt prepare .playground"
 	},
 	"dependencies": {
-		"@unocss/nuxt": "^0.47.5",
-		"@vueuse/core": "^9.6.0",
-		"@vueuse/nuxt": "^9.6.0",
-		"nuxt-icon": "^0.1.8"
+		"@unocss/nuxt": "^0.50.0",
+		"@vueuse/core": "^9.13.0",
+		"@vueuse/nuxt": "^9.13.0",
+		"nuxt-icon": "^0.3.2"
 	},
 	"devDependencies": {
-		"nuxt": "3.0.0"
+		"nuxt": "3.2.2"
 	}
 }
