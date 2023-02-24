@@ -19,6 +19,7 @@ withDefaults(
 			| '10'
 			| '11'
 			| '12'
+		to?: string
 	}>(),
 	{
 		vertical: false,
@@ -26,11 +27,14 @@ withDefaults(
 		gap: '0',
 	}
 )
+
+const NuxtLink = resolveComponent('NuxtLink')
 </script>
 
 <template>
 	<component
-		:is="component"
+		:is="component === 'div' && to !== undefined ? NuxtLink : component"
+		:to="to"
 		class="flex"
 		:class="{
 			'flex-col': vertical,
