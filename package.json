@@ -1,7 +1,7 @@
 {
 	"name": "oxecore",
 	"type": "module",
-	"version": "0.0.3",
+	"version": "1.0.0",
 	"main": "./nuxt.config.ts",
 	"scripts": {
 		"dev": "nuxi prepare & nuxi dev .playground",
@@ -10,12 +10,12 @@
 		"preview": "nuxi preview .playground"
 	},
 	"dependencies": {
-		"@unocss/nuxt": "^0.50.0",
-		"@vueuse/core": "^9.13.0",
-		"@vueuse/nuxt": "^9.13.0",
-		"nuxt-icon": "^0.3.2"
+		"@unocss/nuxt": "^0.53.4",
+		"@vueuse/core": "^10.2.0",
+		"@vueuse/nuxt": "^10.2.0",
+		"nuxt-icon": "^0.4.1"
 	},
 	"devDependencies": {
-		"nuxt": "3.2.2"
+		"nuxt": "3.6.1"
 	}
 }

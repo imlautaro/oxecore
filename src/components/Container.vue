@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const props = withDefaults(
 	defineProps<{
-		component?: string
 		max?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 		px?:
 			| 'container-px'
@@ -20,7 +19,6 @@ const props = withDefaults(
 			| '12'
 	}>(),
 	{
-		component: 'div',
 		max: '2xl',
 		px: 'container-px',
 	}
@@ -53,7 +51,7 @@ const buildClasses = computed(() => {
 </script>
 
 <template>
-	<component :is="component" :class="buildClasses">
+	<Stack :class="buildClasses">
 		<slot />
-	</component>
+	</Stack>
 </template>
